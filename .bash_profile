@@ -6,4 +6,4 @@
 
 export EDITOR="nvim"
 export TERMINAL="st"
-xport BROWSER="firefox"
+export BROWSER="firefox"
