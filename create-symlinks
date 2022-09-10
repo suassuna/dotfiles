@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+declare -r WorkingDirectory="$HOME"
+declare ScriptDirectory=$( cd "$( dirname -- "$BASH_SOURCE[0]" )" &> /dev/null && pwd )
+
+for f in $(find $ScriptDirectory -type f -not -wholename "$ScriptDirectory/.git/*" -and -not -name "README.md" -and -not -name "create-symlinks")
+do
+    declare LinkPath="$WorkingDirectory${f#"$ScriptDirectory"}"
+    declare LinkDir="$(dirname "$LinkPath")"
+
+    [ ! -d $LinkDir ] && echo "creating directory $LinkDir..." && mkdir -p $LinkDir 
+
+    echo "adding symlink $f -> $LinkPath"
+    ln -sf $f $LinkPath
+done
