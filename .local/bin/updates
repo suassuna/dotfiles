@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+COUNT=$(yay -Qu | wc -l)
+
+[[ $COUNT -ne 0 ]] && echo "🗘 $COUNT"
