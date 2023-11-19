@@ -1,4 +1,4 @@
 require("scripts.set")
-require("scripts.packer")
+require("scripts.lazy")
 require("scripts.netrw")
 
