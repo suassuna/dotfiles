@@ -8,4 +8,4 @@ export PATH="$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/bin/cron:$
 
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="brave"
